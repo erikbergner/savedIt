@@ -7,8 +7,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  totalSaved: number;
+  price: number;
+  description: string;
+
   constructor(public navCtrl: NavController) {
 
+      this.totalSaved= 0;
   }
-
+  public addItem(){
+      this.totalSaved += this.price;
+      this.description =  "";
+      this.price = null;
+  }
 }
